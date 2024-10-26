@@ -1,105 +1,119 @@
-:root{
-    --background: #000430;
-    --secondary_bg: #171c48;
-    --text: #ffffff;
-    --purple: #828dff;
-    --teal: #24feee;
+/* Root variables for color scheme */
+:root {
+    --background: #000430; /* Background color */
+    --secondary_bg: #171c48; /* Secondary background color */
+    --text: #ffffff; /* Text color */
+    --purple: #828dff; /* Purple color for UI elements */
+    --teal: #24feee; /* Teal color for progress bar */
 }
 
-*{
+/* Global reset for margins and paddings */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
 }
 
-body{
-    background-color: var(--background);
-    color: var(--text);
+/* Body styling */
+body {
+    background-color: var(--background); /* Set background color */
+    color: var(--text); /* Set text color */
 }
 
-.container{
+/* Main container styling */
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6rem;
-}
-.stats-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-    padding: 1rem;
-    border-style: inset;
-    border-color: var(--purple);
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding-top: 6rem; /* Space from the top */
 }
 
-#numbers{
-    font-size: 30px;
-    background-color: var(--purple);
-    width: 5rem;
-    height: 5rem;
+/* Statistics container styling */
+.stats-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-.progress_bar{
-    height: 10px;
-    width: 150px;
-    border-radius: 5px;
-    margin-top: 20px;
-    background-color: var(--secondary_bg);
-}
-.progress{
-    width: 0%;
-    height: 10px;
-    background-color: var(--teal);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    gap: 3rem; /* Space between items */
+    padding: 1rem; /* Inner padding */
+    border-style: inset; /* Inset border */
+    border-color: var(--purple); /* Border color */
+    border-radius: 1rem; /* Rounded corners */
+    margin-bottom: 1.5rem; /* Space below the container */
 }
 
-form{
-    width: 100%;
+/* Styling for task completion numbers */
+#numbers {
+    font-size: 30px; /* Font size */
+    background-color: var(--purple); /* Background color */
+    width: 5rem; /* Fixed width */
+    height: 5rem; /* Fixed height */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-input{
-    width: 15rem;
-    padding: 16px;
-    background-color: var(--secondary_bg);
-    border-radius: 10px;
-    border-color: var(--purple);
-    color: var(--text);
-    outline: none;
-}
-button{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--purple);
-    color: var(--text);
-    font-size: 30px;
-    font-weight: bold;
-    border-style: solid;
-    border-radius: 50%;
-    border-color: transparent;
-    outline: none;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border-radius: 50%; /* Circular shape */
 }
 
+/* Progress bar styling */
+.progress_bar {
+    height: 10px; /* Height of the progress bar */
+    width: 150px; /* Width of the progress bar */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the progress bar */
+    background-color: var(--secondary_bg); /* Background color */
+}
 
+/* Progress indicator styling */
+.progress {
+    width: 0%; /* Initial width (dynamic) */
+    height: 10px; /* Height */
+    background-color: var(--teal); /* Progress color */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for width changes */
+}
+
+/* Form styling */
+form {
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    gap: 10px; /* Space between items */
+    margin-bottom: 20px; /* Space below the form */
+}
+
+/* Input field styling */
+input {
+    width: 15rem; /* Fixed width */
+    padding: 16px; /* Inner padding */
+    background-color: var(--secondary_bg); /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    border-color: var(--purple); /* Border color */
+    color: var(--text); /* Text color */
+    outline: none; /* Remove outline */
+}
+
+/* Button styling */
+button {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center vertically */
+    background-color: var(--purple); /* Background color */
+    color: var(--text); /* Text color */
+    font-size: 30px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-style: solid; /* Solid border */
+    border-radius: 50%; /* Circular shape */
+    border-color: transparent; /* Transparent border */
+    outline: none; /* Remove outline */
+}
 
 /* Style for the task list */
 .task-list {
-    width: 30rem;
+    width: 30rem; /* Fixed width */
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
@@ -107,50 +121,51 @@ button{
 
 /* Styling for individual task items */
 .task-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    color: var(--text);
-    border-radius: 8px;
-    margin-bottom: 8px;
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between checkbox and text */
+    padding: 10px; /* Inner padding */
+    color: var(--text); /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 8px; /* Space below each task */
 }
 
 /* Container for checkbox */
 .checkbox-container {
-    padding: 10px;
-    width: 0;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px; /* Inner padding */
+    width: 0; /* Width for alignment */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* Container for task text */
 .task-text-container {
-    flex-grow: 1;
-    margin: 0 10px;
-    padding: 8px;
-    background-color: var(--secondary_bg);
-    border-radius: 5px;
+    flex-grow: 1; /* Allow to grow and fill space */
+    margin: 0 10px; /* Margin left and right */
+    padding: 8px; /* Inner padding */
+    background-color: var(--secondary_bg); /* Background color */
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Container for delete button */
 .delete-btn-container {
-    background-color: #ff4d4d;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
+    background-color: #ff4d4d; /* Red background for delete button */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 2px; /* Inner padding */
 }
 
+/* Delete button styling */
 .delete-btn {
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
+    background: transparent; /* Transparent background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    font-size: 1.5rem; /* Font size */
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    cursor: pointer; /* Pointer cursor on hover */
 }
