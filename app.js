@@ -9,50 +9,50 @@ let tasks = [];
 
 // Function to update task count
 function updateTaskCount() {
-  const completedTasks = tasks.filter((task) => task.completed).length;
-  numbersContainer.textContent = `${completedTasks} / ${tasks.length}`;
+    const completedTasks = tasks.filter((task) => task.completed).length;
+    numbersContainer.textContent = `${completedTasks} / ${tasks.length}`;
 }
 
 // Function to update task count and progress bar
 function updateTaskCount() {
-  const completedTasks = tasks.filter((task) => task.completed).length;
-  numbersContainer.textContent = `${completedTasks} / ${tasks.length}`;
+    const completedTasks = tasks.filter((task) => task.completed).length;
+    numbersContainer.textContent = `${completedTasks} / ${tasks.length}`;
 
   // Update progress bar width
-  const progressBar = document.querySelector(".progress");
-  const progressPercentage =
+    const progressBar = document.querySelector(".progress");
+    const progressPercentage =
     tasks.length > 0 ? (completedTasks / tasks.length) * 100 : 0;
-  progressBar.style.width = `${progressPercentage}%`;
+    progressBar.style.width = `${progressPercentage}%`;
 }
 
 // Function to add a new task
 function addTask(taskText) {
-  if (taskText.trim() !== "") {
+    if (taskText.trim() !== "") {
     tasks.push({ text: taskText, completed: false });
     renderTasks();
     input.value = ""; // Clear input after adding task
-  }
+    }
 }
 
 // Function to toggle task completion
 function toggleTask(index) {
-  tasks[index].completed = !tasks[index].completed;
-  renderTasks();
+    tasks[index].completed = !tasks[index].completed;
+    renderTasks();
 }
 
 // Function to delete a task
 function deleteTask(index) {
-  tasks.splice(index, 1);
-  renderTasks();
+    tasks.splice(index, 1);
+    renderTasks();
 }
 
 // Function to render tasks in the list
 function renderTasks() {
   // Clear current list
-  taskList.innerHTML = "";
+    taskList.innerHTML = "";
 
   // Render each task
-  tasks.forEach((task, index) => {
+    tasks.forEach((task, index) => {
     const li = document.createElement("li");
 
     // Checkbox container
@@ -90,14 +90,14 @@ function renderTasks() {
     li.appendChild(deleteBtnContainer);
 
     taskList.appendChild(li);
-  });
+    });
 
   // Update task count display
-  updateTaskCount();
+    updateTaskCount();
 }
 
 // Event listener for form submission
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  addTask(input.value);
+    event.preventDefault();
+    addTask(input.value);
 });
