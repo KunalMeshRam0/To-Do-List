@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>To-Do List</title> 
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
     
-    <div class="container">
-        <div class="stats-container">
-            <div class="details">
-                <h1>To-Do List</h1>
-                <p>Go for it!</p>
-                <div class="progress_bar">
-                    <div class="progress"></div>
+    <div class="container"> <!-- Main container for the application -->
+        <div class="stats-container"> <!-- Container for statistics and progress bar -->
+            <div class="details"> <!-- Details section -->
+                <h1>To-Do List</h1> <!-- Main heading -->
+                <p>Go for it!</p> <!-- Encouragement text -->
+                <div class="progress_bar"> <!-- Progress bar container -->
+                    <div class="progress"></div> <!-- Actual progress indicator -->
                 </div>
             </div>
-            <div id="numbers">1 / 5</div>
+            <div id="numbers">1 / 5</div> <!-- Task completion display -->
         </div>
 
-        <form action="">
-            <input type="text" placeholder="Enter your task">
-            <button type="submit"> + </button>
+        <form action=""> <!-- Form to add new tasks -->
+            <input type="text" placeholder="Enter your task"> <!-- Input field for task entry -->
+            <button type="submit"> + </button> <!-- Button to submit the task -->
         </form>
 
-        <ul class="task-list"></ul>
+        <ul class="task-list"></ul> <!-- Unordered list for displaying tasks -->
     </div>
 
-
-
-    <script src="app.js"></script>
+    <script src="app.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 </html>
