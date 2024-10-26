@@ -1,0 +1,156 @@
+:root{
+    --background: #000430;
+    --secondary_bg: #171c48;
+    --text: #ffffff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+}
+.stats-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+    border-style: inset;
+    border-color: var(--purple);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#numbers{
+    font-size: 30px;
+    background-color: var(--purple);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.progress_bar{
+    height: 10px;
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: var(--secondary_bg);
+}
+.progress{
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input{
+    width: 15rem;
+    padding: 16px;
+    background-color: var(--secondary_bg);
+    border-radius: 10px;
+    border-color: var(--purple);
+    color: var(--text);
+    outline: none;
+}
+button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: transparent;
+    outline: none;
+}
+
+
+
+/* Style for the task list */
+.task-list {
+    width: 30rem;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Styling for individual task items */
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: var(--text);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Container for checkbox */
+.checkbox-container {
+    padding: 10px;
+    width: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for task text */
+.task-text-container {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 8px;
+    background-color: var(--secondary_bg);
+    border-radius: 5px;
+}
+
+/* Container for delete button */
+.delete-btn-container {
+    background-color: #ff4d4d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.delete-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
