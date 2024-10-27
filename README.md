@@ -23,9 +23,3 @@ To run this application, you need:
 
 - A web browser (e.g., Chrome, Firefox, Safari)
 
-### Installation
-
-1. **Clone the repository** (or download the files):
-   ```bash
-   git clone https://github.com/yourusername/todo-list.git
-   cd todo-list
